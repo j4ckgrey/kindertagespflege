@@ -34,6 +34,7 @@ const Header = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
   const mobileHeader = (
     <>
       <Link href="/">
@@ -111,7 +112,7 @@ const Header = () => {
               Fotos
             </Link>
             <Link
-              href="/Concept"
+              href="/concept"
               onClick={() => setMenuOpen(false)}
               className="w-full text-center bg-rose-100 text-rose-700 font-semibold px-4 py-2 rounded-lg shadow"
             >
@@ -154,7 +155,7 @@ const Header = () => {
           Fotos
         </Link>
         <Link
-          href="/Concept"
+          href="/concept"
           className="text-rose-700 font-semibold hover:underline"
         >
           Konzept
@@ -162,6 +163,10 @@ const Header = () => {
       </nav>
     </header>
   );
+  if (isMobile === null) {
+    return null;
+  }
+
   return isMobile ? mobileHeader : desktopHeader;
 };
 

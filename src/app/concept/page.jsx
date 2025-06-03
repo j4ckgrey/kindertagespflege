@@ -1,7 +1,7 @@
 import React from "react";
 
 const Concept = () => (
-  <div className="konzept-page">
+  <div>
     <h1>Pädagogisches Konzept – Kimberley Engelhardt</h1>
     <h2>Großtagespflege „Die Weltentdecker“ in Wesseling</h2>
 
