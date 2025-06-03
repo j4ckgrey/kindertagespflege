@@ -21,8 +21,8 @@ const ThankYou = () => {
       <div className="text-center space-y-4">
         <div>{counter}</div>
         <p>
-          Vielen Dank, {name}, für dein Feedback! Wir haben dir eine E-Mail mit
-          einem Bestätigungslink geschickt.
+          Vielen Dank für dein Feedback! Wir haben dir eine E-Mail mit einem
+          Bestätigungslink geschickt.
           <br />
           Bitte bestätige deine E-Mail-Adresse, damit dein Feedback auf meiner
           Startseite sichtbar wird.
