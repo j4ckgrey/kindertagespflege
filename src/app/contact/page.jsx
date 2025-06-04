@@ -32,7 +32,7 @@ const Contact = () => {
             value={form.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            className="bg-white border border-gray-300 rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition"
           />
         </div>
         <div>
@@ -49,7 +49,7 @@ const Contact = () => {
             value={form.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            className="bg-white border border-gray-300 rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition"
           />
         </div>
         <div>
@@ -66,12 +66,12 @@ const Contact = () => {
             value={form.message}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            className="bg-white border border-gray-300 rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition"
           />
         </div>
         <button
           type="submit"
-          className="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-90 transition"
+          className="bg-rose-500 text-white font-semibold py-3 px-6 rounded-md shadow-md hover:bg-pink-600 hover:shadow-lg transition"
         >
           Absenden
         </button>
