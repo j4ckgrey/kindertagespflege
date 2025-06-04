@@ -40,7 +40,9 @@ export async function POST(req) {
     }
 
     const protocol = req.headers["x-forwarded-proto"] || "https";
-    const host = req.headers.host;
+    const host =
+      req.headers.host ||
+      process.env.NEXT_PUBLIC_SITE_URL?.replace(/^https?:\/\//, "");
     const confirmUrl = `${protocol}://${host}/confirm?token=${token}`;
 
     const html = FeedbackConfirmationEmailHtml(confirmUrl);
