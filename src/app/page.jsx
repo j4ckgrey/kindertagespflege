@@ -35,16 +35,6 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="bg-rose-100 mt-6 py-3 px-6 text-center flex flex-col justify-center">
-        <h3>Spielzeit und Spaß</h3>
-        <p>
-          Morgens starten wir mit viel Bewegung und Spielen – drinnen und
-          draußen. Ob gemeinsame Bastelaktionen, spannende Rollenspiele oder
-          Entdeckungen im Garten, die Kinder erleben jeden Tag neue Abenteuer in
-          sicherer Umgebung.
-        </p>
-      </div>
-
       <TimeTableSection className="pt-6" />
 
       <DaycarerSection className="pt-6" />

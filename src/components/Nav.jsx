@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
@@ -19,7 +18,6 @@ const Nav = () => {
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
-        menuOpen &&
         menuRef.current &&
         !menuRef.current.contains(e.target) &&
         buttonRef.current &&
@@ -30,11 +28,10 @@ const Nav = () => {
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [menuOpen]);
+  }, []);
 
   return (
     <>
-      {/* Desktop nav */}
       <nav className="hidden md:flex gap-10">
         {navLinks.map(({ href, label }) => (
           <Link
@@ -47,22 +44,27 @@ const Nav = () => {
         ))}
       </nav>
 
-      {/* Mobile hamburger button */}
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="md:hidden text-rose-700 font-semibold"
+        ref={buttonRef}
+        className="md:hidden text-rose-700 font-bold text-2xl"
+        aria-label="Toggle navigation menu"
       >
-        ☰
+        {menuOpen ? "✕" : "☰"}
       </button>
 
-      {/* Mobile dropdown menu */}
       {menuOpen && (
-        <div className="absolute top-full right-4 mt-2 w-48 bg-white rounded shadow-md z-50 md:hidden">
-          {navLinks.map(({ href, label }) => (
+        <div
+          ref={menuRef}
+          className="absolute top-full right-4 mt-2 w-48 bg-amber-200 rounded shadow-md z-50 md:hidden border border-rose-300"
+        >
+          {navLinks.map(({ href, label }, i) => (
             <Link
               key={href}
               href={href}
-              className="block px-4 py-2 text-rose-700 hover:bg-amber-100"
+              className={`block px-4 py-3 text-rose-700 font-semibold hover:bg-amber-100 ${
+                i < navLinks.length - 1 ? "border-b border-rose-300" : ""
+              }`}
               onClick={() => setMenuOpen(false)}
             >
               {label}
