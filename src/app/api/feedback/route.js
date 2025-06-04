@@ -39,6 +39,7 @@ export async function POST(req) {
       );
     }
 
+    const protocol = "https";
     const host = process.env.NEXT_PUBLIC_SITE_URL;
     const confirmUrl = `${protocol}://${host}/confirm?token=${token}`;
 
