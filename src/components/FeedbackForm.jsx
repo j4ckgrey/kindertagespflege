@@ -77,7 +77,7 @@ const FeedbackForm = () => {
         </div>
         <button
           type="submit"
-          className="bg-rose-500 text-white font-semibold py-3 px-6 rounded-md shadow-md hover:bg-pink-600 hover:shadow-lg transition"
+          className="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-90 transition"
         >
           Absenden
         </button>

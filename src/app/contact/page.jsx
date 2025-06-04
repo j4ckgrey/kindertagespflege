@@ -54,7 +54,7 @@ const Contact = () => {
         </div>
         <div>
           <label
-            className="block mb-1 text-secondary font-medium"
+            className="bg-white border border-gray-300 rounded-md p-3 w-full focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition"
             htmlFor="message"
           >
             Nachricht
