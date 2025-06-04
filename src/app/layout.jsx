@@ -5,7 +5,6 @@ import Image from "next/image";
 import Logo from "@/assets/Image.png";
 import "./globals.css";
 
-// Optional metadata object (for search engines or SEO libraries)
 export const metadata = {
   title: "Die Weltentdecker",
   description: "Entdecke spielerisch die Welt mit uns!",
@@ -30,7 +29,13 @@ export default function RootLayout({ children }) {
           <Header />
           <main className="page-container flex-grow">
             <div className="relative w-96 h-auto mx-auto mb-6">
-              <Image src={Logo} alt="logo" className="object-contain" />
+              <Image
+                src={Logo}
+                alt="logo"
+                className="object-contain"
+                width="auto"
+                height="auto"
+              />
             </div>
             {children}
           </main>
